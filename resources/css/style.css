@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "Retro-font";
+    src: url(../fonts/retro_gaming/Retro\ Gaming.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Retro-font';
+    color: aliceblue;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background-image: url(../images/color_p_2_low.png);
+}
+
+header{
+    width: 100%;
+    height: 12rem;
+    background-image: url(../images/color_p_2_low.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav{
+    position: fixed;
+    left: 2rem;
+}
+
+header li{
+    display: inline-block;
+    margin: 0 2rem;
+} 
+
+header a{
+    color: aliceblue;
+}
+
+#header-logo{
+    width: 10rem;
+    height: 10rem;
+}
+
+main{
+    position: relative;
+    top: 12rem;
+}
+
+.intro{
+    width: 100em;
+    height: auto;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: dashed aliceblue 1.5rem;
+    line-height: 8rem;
+    text-align: center;
+}
+
+/*** button styles ***/
+
+a{
+    text-decoration: underline;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/*********************/
+
+/*** Topography Styles ***/
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    margin: 1.5rem;
+    
+}
+
+h1{
+    font-size: 3.2rem;
+}
+
+h2{
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+  
+h4, h5 {
+    font-size: 1.8rem;
+}
+  
+h6{
+    font-size: 1.6rem;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+li{
+    font-size: 1.6rem;
+}
+/************************/
