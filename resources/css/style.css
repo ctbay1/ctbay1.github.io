@@ -64,6 +64,25 @@ main{
     text-align: center;
 }
 
+.grid{
+    margin: 10rem auto;
+    width: 50rem;
+    height:50rem;
+    border: 1.5rem aliceblue dashed;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+.box{
+    background-color: #427BD2;
+    border: dashed #193052 0.3rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /*** button styles ***/
 
 a{
