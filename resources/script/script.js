@@ -7,3 +7,12 @@ function hide_start_block(){
 }
 
 game_start_block.addEventListener('click',hide_start_block);
+
+const projects_block = document.getElementById('projects_title');
+const game_sec       = document.getElementById('game_sec');
+
+function disp_projects_block(){
+    game_sec.hidden = false;
+}
+
+projects_block.addEventListener('click',disp_projects_block);
