@@ -12,7 +12,11 @@ const projects_block = document.getElementById('projects_title');
 const game_sec       = document.getElementById('game_sec');
 
 function disp_projects_block(){
-    game_sec.hidden = false;
+    if (game_sec.hidden === true){
+        game_sec.hidden = false;
+    } else{
+        game_sec.hidden = true;
+    }
 }
 
 projects_block.addEventListener('click',disp_projects_block);
