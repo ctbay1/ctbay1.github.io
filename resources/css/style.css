@@ -124,6 +124,18 @@ main{
     justify-content: center;
 }
 
+#skills_sec{
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#skills_sec img{
+    height: 10rem;
+    width: auto;
+}
+
 /*** button styles ***/
 
 nav a{
