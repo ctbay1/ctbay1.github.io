@@ -54,40 +54,42 @@ main{
     position: relative;
     top: 12rem;
 }
-/*
+
 .center{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}*/
+}
 
 .intro{
-    width: 100em;
+    width: 100rem;
     height: auto;
     margin-top: 5rem;
-    margin-left: auto;
-    margin-right: auto;
     border: dashed aliceblue 1.5rem;
     line-height: 8rem;
-    text-align: center;
 }
 
 .title{
-    width: 100em;
+    width: 100rem;
     margin-top: 4rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
+ 
     border: 1rem #5F789E dashed;
-    text-align: center;
 }
 
 .title h2{
     margin: 1.5rem 0;
 }
 
+.section{
+    width: 100rem;
+    border-bottom: 1rem #5F789E dashed;
+    border-left: 1rem #5F789E dashed;
+    border-right: 1rem #5F789E dashed;
+    padding: 2rem;
+}
+
 #start_game{
-    margin: 0 auto;
+    
     width: 50rem;
     height:50rem;
     border: 1.5rem aliceblue dashed;
@@ -100,7 +102,7 @@ main{
 }
 
 .grid{
-    margin: 0 auto;
+    
     width: 50rem;
     height:50rem;
     border: 1.5rem aliceblue dashed;
