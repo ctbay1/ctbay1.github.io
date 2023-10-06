@@ -60,7 +60,7 @@ main{
 }
 
 .intro{
-    width: 100rem;
+    max-width: 100rem;
     height: auto;
     margin-top: 5rem;
     border: dashed aliceblue 1.5rem;
@@ -68,7 +68,7 @@ main{
 }
 
 .title{
-    width: 100rem;
+    max-width: 100rem;
     margin-top: 4rem;
     border: 1rem #5F789E dashed;
 }
@@ -78,7 +78,7 @@ main{
 }
 
 .section{
-    width: 100rem;
+    max-width: 100rem;
     border-bottom: 1rem #5F789E dashed;
     border-left: 1rem #5F789E dashed;
     border-right: 1rem #5F789E dashed;
@@ -86,7 +86,6 @@ main{
 }
 
 #start_game{
-    
     width: 50rem;
     height:50rem;
     border: 1.5rem aliceblue dashed;
@@ -122,15 +121,17 @@ main{
 }
 
 #skills_sec{
-    height: 15rem;
+    min-height: 15rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #skills_sec img{
     height: 10rem;
     width: auto;
+    margin: 1rem;
 }
 
 /*** button styles ***/
@@ -196,3 +197,18 @@ li{
     font-size: 1.8rem;
 }
 /************************/
+
+@media only screen and (max-width: 800px){
+    #header-logo{
+        display: none;
+    }
+
+    nav{
+        position: static;
+    }
+
+    #start_game , .grid{
+        width: 30rem;
+        height: 30rem;
+    }
+}

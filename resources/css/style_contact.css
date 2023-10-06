@@ -54,17 +54,17 @@ main{
 }
 
 .contact_sec{
-    margin: 5rem;
-    width: 100rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 4rem;
+    max-width: 100rem;
     border: 1.5rem #193052 dashed;
     padding: 2rem;
 }
 
 .contact_sec h1{
-    width:fit-content;
     padding: 2rem;
     border-bottom: 1.5rem #193052 dashed;
-
 }
 
 .contact_info{
@@ -77,6 +77,7 @@ main{
 
 .contact_info h4{
     margin: 2rem;
+    letter-spacing: 0.5rem;
 }
 /*** button styles ***/
 
@@ -128,3 +129,29 @@ li{
     font-size: 1.8rem;
 }
 /************************/
+
+@media only screen and (max-width: 800px){
+    
+    #header-logo{
+        display: none;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .contact_sec{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact_info h4{
+        font-size: 1.6rem;
+        letter-spacing: normal;
+    }
+
+    #email{
+        font-size: 1.3rem;
+    }
+}
