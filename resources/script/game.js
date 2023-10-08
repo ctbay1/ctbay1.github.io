@@ -1,15 +1,6 @@
 let game_start_block = document.getElementById('start_game');
 let game_grid        = document.getElementById('game_grid');
 
-function hide_start_block(){
-    game_grid.hidden = false;
-    game_start_block.hidden = true;
-}
-
-game_start_block.addEventListener('click',hide_start_block);
-
-// game code
-
 let boxes = document.getElementsByClassName('box');
 
 function generate_rand_num(){
@@ -26,13 +17,31 @@ function reset_color(){
     boxes[i].style.backgroundColor = '#2F5C9E';
 }
 
-setTimeout(change_color,3000);
-setTimeout(reset_color,4000);
+function hide_start_block(){
+    if (game_grid.hidden === true){
+        game_grid.hidden = false;
+        game_start_block.hidden = true;
+
+        setTimeout(change_color,2000);
+        setTimeout(reset_color,3000);
+    }
+}
+
+game_start_block.addEventListener('click',hide_start_block);
 
 /*
-if (game_grid.hidden === false){
-    let i = generate_rand_num();   
-    boxes[i].style.backgroundColor = '#829E28';
+function play_game(){
+    //Level 1
+    let level = 1;
+    let i = generate_rand_num();
+    change_color();
+    reset_color();
+
+
+
+    //Level 2
+
 }*/
+
 
 //
