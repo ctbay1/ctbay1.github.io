@@ -11,6 +11,17 @@
 
 html{
     font-size: 10px;
+    scrollbar-color: aliceblue #193052;
+}
+
+::-webkit-scrollbar{
+    background-color: #193052;
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background: aliceblue;
+    border-radius: 0.4rem;
 }
 
 body{
@@ -118,6 +129,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: background-color 300ms linear;
 }
 
 #skills_sec{
