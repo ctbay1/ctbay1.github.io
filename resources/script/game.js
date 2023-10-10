@@ -97,7 +97,7 @@ function play_game(level){
             /*console.log(control_list);
             console.log(rand_box_list);*/
         });
-        check();
+        //check();
     }
 }
 
