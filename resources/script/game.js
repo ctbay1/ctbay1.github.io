@@ -21,18 +21,6 @@ function reset_all(){
         boxes[i].style.backgroundColor = '#2F5C9E'
     }
 }
-/*
-function create_rand_box_list(){
-    let box_list = [];
-    for (let i=0; i<9; i++){
-        let rand_box = [];
-        for (j=0; j<=i; j++){
-            rand_box.push(generate_rand_num());
-        }
-        box_list.push(rand_box);
-    }
-    return box_list;
-}*/
 
 function create_rand_box_list(lim){
     let box_list = [];
