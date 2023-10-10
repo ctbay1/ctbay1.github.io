@@ -47,10 +47,12 @@ function highlight_boxes(box_num){
         reset_color(box_num)
     },2000);
 }
-
-function handle_event(box_number){
-    return box_number;
-}
+/*let clicked = false;
+function check(){
+    if (clicked === false){
+        console.log('test');
+    }
+}*/
 
 function play_game(level){
 
@@ -62,28 +64,40 @@ function play_game(level){
         },1000*i);
         let num = rand_box_list[i];
         boxes[num].addEventListener('click',()=>{
-            console.log(control_list);
-            console.log(rand_box_list);
+            
+            //clicked = true;
+            /*console.log(control_list);
+            console.log(rand_box_list);*/
             if (control_list.includes(num) === false){ //wrote this because couldn't add removeEventListener,
-                control_list.push(handle_event(num)); //it's here to make sure you don't add twice to the list when accidentally double clicked.
+                control_list.push(num); //it's here to make sure you don't add twice to the list when accidentally double clicked.
             }
-            console.log(control_list);
-            console.log(rand_box_list);
+            /*console.log(control_list);
+            console.log(rand_box_list);*/
+            if ((control_list.length === rand_box_list.length) && (rand_box_list.join('') !== control_list.join(''))){
+                window.alert('Wrong order, try again!');
+                control_list = ['x','y','z'];
+                reset_all();
+                play_game(level);
+            }
+            /*console.log(control_list);
+            console.log(rand_box_list);*/
             if (rand_box_list.join('') === control_list.join('')){
                 window.alert(`Level ${level} clear!`);
-                control_list = create_rand_box_list(level - 1);
+                control_list = ['a','b','c'];
                 level++;
-                if (level === 9){
-                    window.alert(`Congratulations you've cleared the game! You are smart! Would you like to restart? Going back to the Level 1.`)
+                if (level === 10){
+                    window.alert(`Congratulations, you've cleared the game! You must be a smart person! Would you like to restart? Going back to the Level 1.`)
+                    reset_all();
                     play_game(1);
                 }else{
                     reset_all();
                     play_game(level);
                 }
             }
-            console.log(control_list);
-            console.log(rand_box_list);
+            /*console.log(control_list);
+            console.log(rand_box_list);*/
         });
+        check();
     }
 }
 
