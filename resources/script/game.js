@@ -15,6 +15,12 @@ function change_color(num){
 function reset_color(num){
     boxes[num].style.backgroundColor = '#2F5C9E';
 }
+
+function reset_all(){
+    for (let i=0; i<boxes.length; i++){
+        boxes[i].style.backgroundColor = '#2F5C9E'
+    }
+}
 /*
 function create_rand_box_list(){
     let box_list = [];
@@ -58,8 +64,8 @@ function handle_event(box_number){
     return box_number;
 }
 
-function play_game(){
-    let level = 3
+function play_game(level){
+
     const rand_box_list = create_rand_box_list(level - 1);
     let control_list    = [];
     for (let i=0; i<rand_box_list.length; i++){
@@ -78,6 +84,14 @@ function play_game(){
             if (rand_box_list.join('') === control_list.join('')){
                 window.alert(`Level ${level} clear!`);
                 control_list = create_rand_box_list(level - 1);
+                level++;
+                if (level === 9){
+                    window.alert(`Congratulations you've cleared the game! You are smart! Would you like to restart? Going back to the Level 1.`)
+                    play_game(1);
+                }else{
+                    reset_all();
+                    play_game(level);
+                }
             }
             console.log(control_list);
             console.log(rand_box_list);
@@ -90,7 +104,8 @@ function hide_start_block(){
         game_grid.hidden = false;
         game_start_block.hidden = true;
 
-        play_game();
+        const level = 1;
+        play_game(level);
     }
 }
 
