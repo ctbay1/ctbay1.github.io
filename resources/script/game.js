@@ -68,12 +68,19 @@ function play_game(){
         },1000*i);
         let num = rand_box_list[i];
         boxes[num].addEventListener('click',()=>{
+            console.log(control_list);
+            console.log(rand_box_list);
             if (control_list.includes(num) === false){ //wrote this because couldn't add removeEventListener,
                 control_list.push(handle_event(num)); //it's here to make sure you don't add twice to the list when accidentally double clicked.
             }
+            console.log(control_list);
+            console.log(rand_box_list);
             if (rand_box_list.join('') === control_list.join('')){
                 window.alert(`Level ${level} clear!`);
+                control_list = create_rand_box_list(level - 1);
             }
+            console.log(control_list);
+            console.log(rand_box_list);
         });
     }
 }
