@@ -1,20 +1,81 @@
-let game_start_block = document.getElementById('start_game');
-let game_grid        = document.getElementById('game_grid');
+const game_start_block = document.getElementById('start_game');
+const game_grid        = document.getElementById('game_grid');
 
-let boxes = document.getElementsByClassName('box');
+const boxes    = document.getElementsByClassName('box');
+const box_nums = 9; 
 
 function generate_rand_num(){
-    return Math.floor(Math.random()*9);
+    return Math.floor(Math.random()*box_nums);
 }
 
-let i = generate_rand_num();
-
-function change_color(){
-    boxes[i].style.backgroundColor = 'red';
+function change_color(num){
+    boxes[num].style.backgroundColor = '#CF5F44';
 }
 
-function reset_color(){
-    boxes[i].style.backgroundColor = '#2F5C9E';
+function reset_color(num){
+    boxes[num].style.backgroundColor = '#2F5C9E';
+}
+/*
+function create_rand_box_list(){
+    let box_list = [];
+    for (let i=0; i<9; i++){
+        let rand_box = [];
+        for (j=0; j<=i; j++){
+            rand_box.push(generate_rand_num());
+        }
+        box_list.push(rand_box);
+    }
+    return box_list;
+}*/
+
+function create_rand_box_list(lim){
+    let box_list = [];
+    for (let i=0; i<lim+1; i++){
+        let rand_num = generate_rand_num();
+        if (box_list.includes(rand_num) === false){
+            box_list.push(rand_num);
+        }
+        else{
+            while(box_list.includes(rand_num)){
+                rand_num = generate_rand_num();
+            }
+            box_list.push(rand_num);
+        }
+    }
+    return box_list;
+}
+
+function highlight_boxes(box_num){
+    setTimeout(()=>{
+        change_color(box_num);
+    },1000);
+    setTimeout(()=>{
+        reset_color(box_num)
+    },2000);
+}
+
+function handle_event(box_number){
+    return box_number;
+}
+
+function play_game(){
+    let level = 3
+    const rand_box_list = create_rand_box_list(level - 1);
+    let control_list    = [];
+    for (let i=0; i<rand_box_list.length; i++){
+        setTimeout(()=>{
+            highlight_boxes(rand_box_list[i]);
+        },1000*i);
+        let num = rand_box_list[i];
+        boxes[num].addEventListener('click',()=>{
+            if (control_list.includes(num) === false){ //wrote this because couldn't add removeEventListener,
+                control_list.push(handle_event(num)); //it's here to make sure you don't add twice to the list when accidentally double clicked.
+            }
+            if (rand_box_list.join('') === control_list.join('')){
+                window.alert(`Level ${level} clear!`);
+            }
+        });
+    }
 }
 
 function hide_start_block(){
@@ -22,26 +83,18 @@ function hide_start_block(){
         game_grid.hidden = false;
         game_start_block.hidden = true;
 
-        setTimeout(change_color,2000);
-        setTimeout(reset_color,3000);
+        play_game();
     }
 }
 
 game_start_block.addEventListener('click',hide_start_block);
 
-/*
-function play_game(){
-    //Level 1
-    let level = 1;
-    let i = generate_rand_num();
-    change_color();
-    reset_color();
+function box_clicked_color(box_int){
+    boxes[box_int].style.backgroundColor = '#84CF1B';
+}
 
-
-
-    //Level 2
-
-}*/
-
-
-//
+for (let i=0; i<boxes.length; i++){
+    boxes[i].addEventListener('click',()=>{
+        box_clicked_color(i);
+    })
+}
