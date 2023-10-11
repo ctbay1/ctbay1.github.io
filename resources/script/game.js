@@ -1,8 +1,12 @@
 const game_start_block = document.getElementById('start_game');
 const game_grid        = document.getElementById('game_grid');
+const restart_button   = document.getElementById('restart_button');
+const hide_letters_but = document.getElementById('hide_letters');
+const letter_in_but    = document.getElementById('letter_in_button');
 
-const boxes    = document.getElementsByClassName('box');
-const box_nums = 9; 
+const boxes       = document.getElementsByClassName('box');
+const box_nums    = 9;
+const box_letters = document.getElementsByClassName('box_letter'); 
 
 function generate_rand_num(){
     return Math.floor(Math.random()*box_nums);
@@ -47,12 +51,6 @@ function highlight_boxes(box_num){
         reset_color(box_num)
     },2000);
 }
-/*let clicked = false;
-function check(){
-    if (clicked === false){
-        console.log('test');
-    }
-}*/
 
 function play_game(level){
 
@@ -64,8 +62,6 @@ function play_game(level){
         },1000*i);
         let num = rand_box_list[i];
         boxes[num].addEventListener('click',()=>{
-            
-            //clicked = true;
             /*console.log(control_list);
             console.log(rand_box_list);*/
             if (control_list.includes(num) === false){ //wrote this because couldn't add removeEventListener,
@@ -97,7 +93,6 @@ function play_game(level){
             /*console.log(control_list);
             console.log(rand_box_list);*/
         });
-        //check();
     }
 }
 
@@ -122,3 +117,28 @@ for (let i=0; i<boxes.length; i++){
         box_clicked_color(i);
     })
 }
+
+function restart_game(){
+    reset_all();
+    play_game(1);
+}
+
+restart_button.addEventListener('click',restart_game);
+
+function hide_letters(){
+    for (let i=0; i<box_letters.length; i++){
+        if (box_letters[i].style.visibility != 'hidden'){
+            box_letters[i].style.visibility = 'hidden';
+        }else{
+            box_letters[i].style.visibility = 'visible';
+        }
+        
+    }
+    if (letter_in_but.style.visibility != 'hidden'){
+        letter_in_but.style.visibility = 'hidden';
+    }else{
+        letter_in_but.style.visibility = 'visible';
+    }
+}
+
+hide_letters_but.addEventListener('click',hide_letters);

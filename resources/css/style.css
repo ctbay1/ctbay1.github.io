@@ -96,6 +96,37 @@ main{
     padding: 2rem;
 }
 
+#game_helper_buttons{
+    width: 50rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#game_helper h2{
+    padding: 0.8rem;
+    width: 50rem;
+    margin-bottom: 1rem;
+    border-bottom: 1rem #5F789E dashed;
+}
+
+#restart_button{
+    width: 5rem;
+    margin-bottom: 1rem;
+}
+
+#hide_letters{
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    background-color: #2F5C9E;
+    border: 0.3rem #5F789E dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #start_game{
     width: 50rem;
     height:50rem;
@@ -145,7 +176,6 @@ main{
     width: auto;
     margin: 1rem;
 }
-
 /*** button styles ***/
 
 nav a{
@@ -179,6 +209,24 @@ nav a:hover{
 
 .button h2:hover{
     color: #4688EB;
+}
+
+#restart_button:hover{
+    width: 6rem;
+}
+
+#restart_button:active{
+    width: 5rem;
+}
+
+#hide_letters:hover{
+    width: 6rem;
+    height: 6rem;
+}
+
+#hide_letters:active{
+    width: 5rem;
+    height: 5rem;
 }
 
 /*********************/
@@ -227,6 +275,10 @@ li{
 
     nav{
         position: static;
+    }
+
+    #game_helper h2{
+        width: 25rem;
     }
 
     #start_game , .grid{
