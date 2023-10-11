@@ -281,6 +281,10 @@ li{
         width: 25rem;
     }
 
+    #game_helper_buttons{
+        width: 25rem;
+    }
+
     #start_game , .grid{
         width: 25rem;
         height: 25rem;
