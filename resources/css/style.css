@@ -125,6 +125,11 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 1.6rem;
+}
+
+#letter_in_button{
+    font-size: inherit;
 }
 
 #start_game{
@@ -222,11 +227,13 @@ nav a:hover{
 #hide_letters:hover{
     width: 6rem;
     height: 6rem;
+    font-size: 1.92rem;
 }
 
 #hide_letters:active{
     width: 5rem;
     height: 5rem;
+    font-size: 1.6rem;
 }
 
 /*********************/
