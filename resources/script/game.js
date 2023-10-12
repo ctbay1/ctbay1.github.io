@@ -69,12 +69,12 @@ function play_game(level){
             }
             /*console.log(control_list);
             console.log(rand_box_list);*/
-            if ((control_list.length === rand_box_list.length) && (rand_box_list.join('') !== control_list.join(''))){
+            /*if ((control_list.length === rand_box_list.length) && (rand_box_list.join('') !== control_list.join(''))){
                 window.alert('Wrong order, try again!');
                 control_list = ['x','y','z'];
                 reset_all();
                 play_game(level);
-            }
+            }*/
             /*console.log(control_list);
             console.log(rand_box_list);*/
             if (rand_box_list.join('') === control_list.join('')){
