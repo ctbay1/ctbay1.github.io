@@ -74,14 +74,14 @@ main{
     max-width: 100rem;
     height: auto;
     margin-top: 5rem;
-    border: dashed aliceblue 1.5rem;
+    border: solid aliceblue 0.75rem;
     line-height: 8rem;
 }
 
 .title{
     max-width: 100rem;
     margin-top: 4rem;
-    border: 1rem #5F789E dashed;
+    border: 0.5rem #5F789E solid;
 }
 
 .title h2{
@@ -90,9 +90,10 @@ main{
 
 .section{
     max-width: 100rem;
-    border-bottom: 1rem #5F789E dashed;
-    border-left: 1rem #5F789E dashed;
-    border-right: 1rem #5F789E dashed;
+    border-bottom: 0.5rem #5F789E solid;
+    border-left: 0.5rem #5F789E solid;
+    border-right: 0.5rem #5F789E solid;
+    /*border: 0.5rem #5F789E solid;*/
     padding: 2rem;
 }
 
@@ -103,14 +104,7 @@ main{
     align-items: center;
 }
 
-#game_helper h2{
-    padding: 0.8rem;
-    width: 50rem;
-    margin-bottom: 1rem;
-    border-bottom: 1rem #5F789E dashed;
-}
-
-#restart_button{
+.restart_button{
     width: 5rem;
     margin-bottom: 1rem;
 }
@@ -120,7 +114,7 @@ main{
     height: 5rem;
     margin-bottom: 1rem;
     background-color: #2F5C9E;
-    border: 0.3rem #5F789E dashed;
+    border: 0.3rem #5F789E solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,7 +129,7 @@ main{
 #start_game{
     width: 50rem;
     height:50rem;
-    border: 1.5rem aliceblue dashed;
+    border: 0.5rem aliceblue solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,9 +142,16 @@ main{
     
     width: 50rem;
     height:50rem;
-    border: 1.5rem aliceblue dashed;
+    border: 0.5rem aliceblue solid;
     display: grid;
+}
+
+#game_grid_1{
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+#game_grid_2{
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
 }
 
 [hidden]{
@@ -159,7 +160,7 @@ main{
 
 .box{
     background-color: #2F5C9E;
-    border: dashed #193052 0.3rem;
+    border: solid #193052 0.3rem;
     color: white;
     display: flex;
     flex-direction: column;
@@ -181,6 +182,20 @@ main{
     width: auto;
     margin: 1rem;
 }
+
+.button{
+    margin: 0 auto;
+}
+
+.game_title{
+    padding: 0.5rem;
+    margin-top: 2rem;
+}
+
+.box_text_2{
+    display: none;
+}
+
 /*** button styles ***/
 
 nav a{
@@ -197,30 +212,27 @@ nav a:hover{
     cursor: pointer;
     opacity: 0.5;
 }
-
+/*
 .box:active{
     background-color: #84CF1B !important;
     opacity: 1;
-}
+}*/
 
-.button h2{
+.button{
     transition: color 300ms 100ms;
 }
 
 .button:hover{
     cursor: pointer;
+    color: #4688EB;
     
 }
 
-.button h2:hover{
-    color: #4688EB;
-}
-
-#restart_button:hover{
+.restart_button:hover{
     width: 6rem;
 }
 
-#restart_button:active{
+.restart_button:active{
     width: 5rem;
 }
 
@@ -279,6 +291,10 @@ li{
     #header-logo{
         display: none;
     }
+    
+    .section{
+        padding: 1rem;
+    }
 
     nav{
         position: static;
@@ -292,7 +308,12 @@ li{
         width: 25rem;
     }
 
-    #start_game , .grid{
+    #start_game{
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .grid{
         width: 25rem;
         height: 25rem;
     }

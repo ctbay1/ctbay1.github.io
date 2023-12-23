@@ -58,13 +58,13 @@ main{
     margin-bottom: 5rem;
     margin-left: 4rem;
     max-width: 100rem;
-    border: 1.5rem #193052 dashed;
+    border: 0.75rem #193052 solid;
     padding: 2rem;
 }
 
 .contact_sec h1{
     padding: 2rem;
-    border-bottom: 1.5rem #193052 dashed;
+    border-bottom: 0.75rem #193052 solid;
 }
 
 .contact_info{
@@ -79,6 +79,7 @@ main{
     margin: 2rem;
     letter-spacing: 0.5rem;
 }
+
 /*** button styles ***/
 
 nav a{

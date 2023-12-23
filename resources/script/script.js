@@ -2,19 +2,16 @@ let title_blocks   = document.getElementsByClassName('title');
 let section_blocks = document.getElementsByClassName('section');
 
 function disp_sec_blocks(num){
-    //console.log(num);
-    for (let i=num; i<num+1; i++){
-        //console.log(i);
-        if (section_blocks[i].hidden === true){
-            section_blocks[i].hidden = false;
-        } else{
-            section_blocks[i].hidden = true;
-        }
+
+    if (section_blocks[num].hidden === true){
+        section_blocks[num].hidden = false;
+    } else{
+        section_blocks[num].hidden = true;
     }
 }
 
-for (let j=0; j<title_blocks.length; j++){
-    title_blocks[j].addEventListener('click',()=>{
-        disp_sec_blocks(j);
+for (let i=0; i<title_blocks.length; i++){
+    title_blocks[i].addEventListener('click',()=>{
+        disp_sec_blocks(i);
     });
 }
