@@ -1,7 +1,8 @@
 function second_game(){
 
-    const boxes     = document.getElementsByClassName('box_2');
-    const box_texts = document.getElementsByClassName('box_text_2') 
+    const boxes        = document.getElementsByClassName('box_2');
+    const box_texts    = document.getElementsByClassName('box_text_2')
+    const rstrt_button = document.getElementById('restart_button_2')  
 
     const box_num          = boxes.length
     const color_codes      = ['#006D77', '#83C5BE', '#EDF6F9', '#FFDDD2', '#E29578', '#ffbc42', '#d81159', '#782C8F']
@@ -82,9 +83,22 @@ function second_game(){
             handle_boxclick(i)
         })
     }
+    
+    function rst_all(){
+        for (let i=0; i<boxes.length; i++){
+            boxes[i].style.backgroundColor = reset_color_code;
+        }
+        control_list    = []
+        rand_list       = []
+        color_codes_idx = 0
+        play_game_2()
+    }
+
+    rstrt_button.addEventListener('click', rst_all)
 
     function play_game_2(){
         generate_rand_boxes()
+        console.log(rand_list)
         assign_color_to_each_box()
     }
 
