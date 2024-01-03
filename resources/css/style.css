@@ -292,6 +292,11 @@ li{
         display: none;
     }
     
+    .intro{
+        max-height: 50rem;
+        overflow: scroll;
+    }
+
     .section{
         padding: 1rem;
     }
