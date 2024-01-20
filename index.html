@@ -5,6 +5,8 @@
         <link rel="shortcut icon" href="./resources/images/logo3_1.png" type="image/x-icon">
         <link rel="stylesheet" href="./resources/css/reset.css">
         <link rel="stylesheet" href="./resources/css/style.css">
+        <link rel="stylesheet" href="./resources/css/calc_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Cambo|Roboto:300" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
     </head>
@@ -28,63 +30,142 @@
             <div id="projects_title" class="title  center">
                 <h2 class="button">Projects</h2>
             </div>
-                <section id="game_sec" class="section center" hidden>
+            <section id="project_sec" class="section center" hidden>
 
-                    <h2 class="title button center game_title" title="Remember the order of the red boxes">Memory Game #1</h2>
-                        <div hidden class="section center game">
-                            <div id="game_helper" class="center">
-                                <div id="game_helper_buttons" class="center">
-                                    <img src="./resources/images/restart_button.png"  class="button restart_button" alt="restart button" title="Click here to restart" id="restart_button_1">
-                                    <div class="button" id="hide_letters" title="Click here to hide letters"><p id="letter_in_button">A</p></div>
-                                </div>
+                <h2 class="title button center project_title" title="Remember the order of the red boxes">Memory Game #1</h2>
+                    <div hidden class="section center">
+                        <div id="game_helper" class="center">
+                            <div id="game_helper_buttons" class="center">
+                                <img src="./resources/images/restart_button.png"  class="button restart_button" alt="restart button" title="Click here to restart" id="restart_button_1">
+                                <div class="button" id="hide_letters" title="Click here to hide letters"><p id="letter_in_button">A</p></div>
                             </div>
-                            <div id="start_game" class="button center">
-                                <h3>Click</h3>
-                                <h3>here</h3>
-                                <h3>to</h3>
-                                <h3>start</h3>
-                                <h3>the game</h3>
-                            </div>
-                            <section hidden class="grid center" id="game_grid_1">
-                                <div class="box box_1"><h3 class="box_letter_1">A</h3></div>
-                                <div class="box box_1"><h3 class="box_letter_1">B</h3></div>
-                                <div class="box box_1"><h3 class="box_letter_1">C</h3></div>
-                                <div class="box box_1"><h3 class="box_letter_1">D</h3></div>
-                                <div class="box box_1"><h3 class="box_letter_1">E</h3></div>
-                                <div class="box box_1"><h3 class="box_letter_1">F</h3></div>
-                                <div class="box box_1"><h3 class="box_letter_1">G</h3></div>
-                                <div class="box box_1"><h3 class="box_letter_1">H</h3></div>
-                                <div class="box box_1"><h3 class="box_letter_1">I</h3></div>
-                            </section>
                         </div>
-                    
-                    <h2 class="title button center game_title" title="Match the boxes">Memory Game #2</h2>
-                        <div hidden class="section center game">
-                            <div id="game_helper" class="center">
-                                <div id="game_helper_buttons" class="center">
-                                    <img src="./resources/images/restart_button.png"  class="button restart_button" alt="restart button" title="Click here to restart" id="restart_button_2">
-                                </div>
-                            </div>
-                            <section class="grid center" id="game_grid_2">
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                                <div class="box box_2"><p class="box_text_2"></p></div>
-                            </section>
+                        <div id="start_game" class="button center">
+                            <h3>Click</h3>
+                            <h3>here</h3>
+                            <h3>to</h3>
+                            <h3>start</h3>
+                            <h3>the game</h3>
                         </div>
-                    
+                        <section hidden class="grid center" id="game_grid_1">
+                            <div class="box box_1"><h3 class="box_letter_1">A</h3></div>
+                            <div class="box box_1"><h3 class="box_letter_1">B</h3></div>
+                            <div class="box box_1"><h3 class="box_letter_1">C</h3></div>
+                            <div class="box box_1"><h3 class="box_letter_1">D</h3></div>
+                            <div class="box box_1"><h3 class="box_letter_1">E</h3></div>
+                            <div class="box box_1"><h3 class="box_letter_1">F</h3></div>
+                            <div class="box box_1"><h3 class="box_letter_1">G</h3></div>
+                            <div class="box box_1"><h3 class="box_letter_1">H</h3></div>
+                            <div class="box box_1"><h3 class="box_letter_1">I</h3></div>
+                        </section>
+                    </div>
+                
+                <h2 class="title button center project_title" title="Match the boxes">Memory Game #2</h2>
+                    <div hidden class="section center">
+                        <div id="game_helper" class="center">
+                            <div id="game_helper_buttons" class="center">
+                                <img src="./resources/images/restart_button.png"  class="button restart_button" alt="restart button" title="Click here to restart" id="restart_button_2">
+                            </div>
+                        </div>
+                        <section class="grid center" id="game_grid_2">
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                            <div class="box box_2"><p class="box_text_2"></p></div>
+                        </section>
+                    </div>
+                
+                <h2 class="title button center project_title">Resistance and Ohm's Law Calculator</h2>
+                    <div hidden class="section center">
+                        <div class="center calculators">
+                            <h3 class="calc_titles">Resistor Calculator</h3>
+
+                            <h4 id="connect_type">Connection Type</h4>
+                            <div id="connection_type">
+                                <label for="serial"><h4>Series</h4></label>
+                                <input type="radio" id="serial" name="connection_type">
+
+                                <label for="serial"><h4>Parallel</h4></label>
+                                <input type="radio" id="parallel" name="connection_type">
+                            </div>
+
+                            <label for="resistor_vals"><p class="calc_exp">Provide all of the resistance values, separated by a comma "," </p></label>
+                            <input type="text" placeholder="1, 2, 2.2, 3.3e+3, 100e+3" id="resistor_vals">
+                            
+                            <button type="button" id="res_calc_button" class="calc_buttons">Calculate</button>
+
+                            <h4>Result: <span id="result"></span></h4>
+
+                            <h4 id="warning_message" hidden>Select a connection type! Series or Parallel.</h4>
+                        </div>
+                        <div class="center calculators">
+                            <h3 class="calc_titles">Ohm's Law Calculator</h3>
+                            <p class="calc_exp">Enter 2 values to get the other value and press the Calculate button.</p>
+                            <p class="calc_exp">To calculate again, press the Reset button.</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="table_mobile"><h4>Voltage (V)</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table_pc"><h4>Voltage (V)</h4></td>
+                                        <td><input type="text" id="voltage_val" value="" class="table_inputs"></td>
+                                        <td>
+                                            <select name="voltage" id="voltage_units" class="table_selects">                                       
+                                                <option value="milivolts">milivolts (mV)</option>
+                                                <option value="volts" selected="selected">volts (V)</option>                                                                           
+                                            </select>
+                                        </td>                              
+                                    </tr>
+                                    <tr>
+                                        <td class="table_mobile"><h4>Current (I)</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table_pc"><h4>Current (I)</h4></td>
+                                        <td><input type="text" id="current_val" value="" class="table_inputs"></td>
+                                        <td>
+                                            <select name="current" id="current_units" class="table_selects">
+                                                <option value="microamps">microamps (&micro;A)</option>
+                                                <option value="miliamps" selected="selected">miliamps (mA)</option>
+                                                <option value="amps">amps (A)</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table_mobile"><h4>Resistance (R)</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table_pc"><h4>Resistance (R)</h4></td>
+                                        <td><input type="text" id="resistance_val" value="" class="table_inputs"></td>
+                                        <td>
+                                            <select name="ohm" id="ohm_units" class="table_selects">
+                                                <option value="ohms">ohms (&#8486;)</option>
+                                                <option value="kiloohms" selected="selected">kiloohms (k&#8486;)</option>
+                                                <option value="megaohms">megaohms (M&#8486;)</option>                                         
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="ohms_buttons">
+                                <button type="button" id="ohms_calc_button" class="calc_buttons">Calculate</button>
+                                <button type="button" id="ohms_res_button" class="calc_buttons">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
             <div class="title center">
                 <h2 class="button">Skills</h2>
@@ -101,5 +182,6 @@
         <script src="./resources/script/script.js"></script>
         <script src="./resources/script/game.js"></script>
         <script src="./resources/script/game_2.js"></script>
+        <script src="./resources/script/calculator.js"></script>
     </body>
 </html>

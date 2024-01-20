@@ -1,0 +1,140 @@
+html{
+    font-size: 10px;
+}
+
+.calculators{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.calculators h3{
+    font-size: 2.2rem;
+}
+
+.calc_titles{
+    color: #84CF1B;
+    padding-bottom: 0.25rem;
+    border-bottom:solid aliceblue 0.25rem;
+    margin-bottom: 2rem;
+}
+
+#connect_type{
+    border-bottom: solid aliceblue 0.25rem;
+}
+
+#connection_type{
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+label{
+    width: 80%;
+    display: block;
+    text-align: center;
+}
+
+input[type="radio"]{
+    width: 2.5rem;
+    height: 2.5rem;
+    accent-color: #193052;
+    border-radius: 0%;
+}
+
+input[type="radio"]:hover{
+    cursor: pointer;
+}
+
+.calc_exp{
+    margin-bottom: 1rem;
+}
+
+#resistor_vals{
+    width: 60%;
+    border: solid 0.1rem aliceblue;
+}
+
+input[type="text"]{
+    font-size: 1.8rem;
+    background-color: #5F789E;
+    height: 3rem;
+}
+
+::placeholder{
+    color: aliceblue;
+    opacity: 0.75;
+}
+
+.calc_buttons{
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.8rem;
+    background-color: #5F789E;
+    border: solid 0.1rem aliceblue;
+    margin: 1rem 0;
+}
+
+.calc_buttons:hover{
+    cursor: pointer;
+}
+
+#warning_message{
+    color: red;
+    margin-top: 2rem;
+}
+
+table{
+    border: 0.5rem #5F789E solid;
+}
+
+tr{
+    border: 0.25rem #5F789E solid;
+}
+
+select{
+    background-color: #5F789E;
+    height: 3rem;
+    width: 14rem;
+    margin-left: 1rem;
+}
+
+table input{
+    width: 15rem;
+}
+
+#ohms_res_button{
+    background-color: #CF5F44;
+}
+
+.ohms_buttons{
+    display: inline-block;
+}
+
+.table_mobile{
+    display: none;
+}
+
+
+@media only screen and (max-width: 800px){
+    .table_pc{
+        display: none;
+    }
+    .table_mobile{
+        display: block;
+    }
+    td{
+        width: 12rem;
+    }
+    .table_inputs{
+        width: 11rem;
+    }
+
+    .table_selects{
+        width: 12.5rem;
+    }
+}

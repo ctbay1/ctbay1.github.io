@@ -70,7 +70,7 @@ function second_game(){
         if (control_list.includes(box) === false && control_list.length<num_pairs){
             control_list.push(box)
         }
-        console.log(control_list)
+        //console.log(control_list)
         if (control_list.length === 2){
             setTimeout(()=>{
                 compere_boxes(control_list)
@@ -98,7 +98,7 @@ function second_game(){
 
     function play_game_2(){
         generate_rand_boxes()
-        console.log(rand_list)
+        //console.log(rand_list)
         assign_color_to_each_box()
     }
 
