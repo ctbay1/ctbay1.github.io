@@ -9,9 +9,6 @@ function calculate(){
     const serial_clicked   = document.getElementById('serial').checked;
     const parallel_clicked = document.getElementById('parallel').checked; 
 
-    // warning message
-    const warning_msg = document.getElementById('warning_message')
-
     result.innerHTML = '0\u{2126}';
 
     function calc_serial(res_list){
@@ -40,12 +37,8 @@ function calculate(){
         console.log(serial_clicked)
         if (serial_clicked){
             result.innerHTML = `${calc_serial(res_val2list)}\u{2126}`;
-            warning_msg.hidden = true;
         } else if (parallel_clicked){
             result.innerHTML = `${calc_parallel(res_val2list)}\u{2126}`;
-            warning_msg.hidden = true;
-        } else{
-            warning_msg.hidden = false;
         }
     }
 
@@ -113,6 +106,10 @@ function calculate(){
         document.getElementById('voltage_val').value    = '';
         document.getElementById('current_val').value    = '';
         document.getElementById('resistance_val').value = '';
+
+        document.getElementById('voltage_val').placeholder    = '';
+        document.getElementById('current_val').placeholder    = '';
+        document.getElementById('resistance_val').placeholder = '';
     }
 
     ohms_calc_button.addEventListener('click', calc_ohms);

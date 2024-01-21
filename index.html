@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="./resources/css/reset.css">
         <link rel="stylesheet" href="./resources/css/style.css">
         <link rel="stylesheet" href="./resources/css/calc_style.css">
-        <link href="https://fonts.googleapis.com/css?family=Cambo|Roboto:300" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
     </head>
@@ -95,20 +94,20 @@
                             <h4 id="connect_type">Connection Type</h4>
                             <div id="connection_type">
                                 <label for="serial"><h4>Series</h4></label>
-                                <input type="radio" id="serial" name="connection_type">
+                                <input type="radio" id="serial" name="connection_type" title="Select a connection type">
 
                                 <label for="serial"><h4>Parallel</h4></label>
-                                <input type="radio" id="parallel" name="connection_type">
+                                <input type="radio" id="parallel" name="connection_type" title="Select a connection type" checked="checked">
                             </div>
 
                             <label for="resistor_vals"><p class="calc_exp">Provide all of the resistance values, separated by a comma "," </p></label>
-                            <input type="text" placeholder="1, 2, 2.2, 3.3e+3, 100e+3" id="resistor_vals">
+                            <input type="text" placeholder="100, 220, 3.3e+3, 100e+3" id="resistor_vals">
                             
                             <button type="button" id="res_calc_button" class="calc_buttons">Calculate</button>
 
                             <h4>Result: <span id="result"></span></h4>
 
-                            <h4 id="warning_message" hidden>Select a connection type! Series or Parallel.</h4>
+                            
                         </div>
                         <div class="center calculators">
                             <h3 class="calc_titles">Ohm's Law Calculator</h3>
@@ -121,9 +120,9 @@
                                     </tr>
                                     <tr>
                                         <td class="table_pc"><h4>Voltage (V)</h4></td>
-                                        <td><input type="text" id="voltage_val" value="" class="table_inputs"></td>
+                                        <td><input type="text" id="voltage_val" value="" class="table_inputs" placeholder="5"></td>
                                         <td>
-                                            <select name="voltage" id="voltage_units" class="table_selects">                                       
+                                            <select name="voltage" id="voltage_units" class="table_selects" name="voltage_units" title="Select units">                                       
                                                 <option value="milivolts">milivolts (mV)</option>
                                                 <option value="volts" selected="selected">volts (V)</option>                                                                           
                                             </select>
@@ -134,9 +133,9 @@
                                     </tr>
                                     <tr>
                                         <td class="table_pc"><h4>Current (I)</h4></td>
-                                        <td><input type="text" id="current_val" value="" class="table_inputs"></td>
+                                        <td><input type="text" id="current_val" value="" class="table_inputs" placeholder="Leave empty"></td>
                                         <td>
-                                            <select name="current" id="current_units" class="table_selects">
+                                            <select name="current" id="current_units" class="table_selects" name="current_units" title="Select units">
                                                 <option value="microamps">microamps (&micro;A)</option>
                                                 <option value="miliamps" selected="selected">miliamps (mA)</option>
                                                 <option value="amps">amps (A)</option>
@@ -148,9 +147,9 @@
                                     </tr>
                                     <tr>
                                         <td class="table_pc"><h4>Resistance (R)</h4></td>
-                                        <td><input type="text" id="resistance_val" value="" class="table_inputs"></td>
+                                        <td><input type="text" id="resistance_val" value="" class="table_inputs" placeholder="1"></td>
                                         <td>
-                                            <select name="ohm" id="ohm_units" class="table_selects">
+                                            <select name="ohm" id="ohm_units" class="table_selects" name="ohm_units" title="Select units">
                                                 <option value="ohms">ohms (&#8486;)</option>
                                                 <option value="kiloohms" selected="selected">kiloohms (k&#8486;)</option>
                                                 <option value="megaohms">megaohms (M&#8486;)</option>                                         

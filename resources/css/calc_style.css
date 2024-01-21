@@ -14,7 +14,7 @@ html{
 }
 
 .calc_titles{
-    color: #84CF1B;
+    color: #11CF8F;
     padding-bottom: 0.25rem;
     border-bottom:solid aliceblue 0.25rem;
     margin-bottom: 2rem;
@@ -81,6 +81,7 @@ input[type="text"]{
 
 .calc_buttons:hover{
     cursor: pointer;
+    background-color: #313E52;
 }
 
 #warning_message{
@@ -111,6 +112,10 @@ table input{
     background-color: #CF5F44;
 }
 
+#ohms_res_button:hover{
+    background-color: #FC7553;
+}
+
 .ohms_buttons{
     display: inline-block;
 }
@@ -118,7 +123,6 @@ table input{
 .table_mobile{
     display: none;
 }
-
 
 @media only screen and (max-width: 800px){
     .table_pc{
@@ -128,13 +132,17 @@ table input{
         display: block;
     }
     td{
-        width: 12rem;
+        width: 14.5rem;
     }
     .table_inputs{
-        width: 11rem;
+        width: 14.5rem;
     }
 
     .table_selects{
         width: 12.5rem;
+    }
+
+    #resistor_vals{
+        width: 25rem;
     }
 }

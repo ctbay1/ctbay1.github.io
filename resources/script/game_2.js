@@ -5,7 +5,7 @@ function second_game(){
     const rstrt_button = document.getElementById('restart_button_2')  
 
     const box_num          = boxes.length
-    const color_codes      = ['#006D77', '#83C5BE', '#EDF6F9', '#FFDDD2', '#E29578', '#ffbc42', '#d81159', '#782C8F']
+    const color_codes      = ['#006D77', '#83C5BE', '#EDF6F9', '#FFDDD2', '#E29578', '#ffbc42', '#d81159', '#8F2C7E']
     const reset_color_code = '#2F5C9E'
 
     let rand_list    = []
