@@ -248,6 +248,27 @@ nav a:hover{
     font-size: 1.6rem;
 }
 
+.project_image{
+    width: 45rem;
+    height: auto;
+    
+}
+
+figcaption{
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.project_text{
+    margin-top: 1.5rem;
+    text-align:start;
+    line-height: normal;
+}
+
+.project_link{
+    color: #4688EB;
+    text-decoration: underline;
+}
 /*********************/
 
 /*** Topography Styles ***/
@@ -321,5 +342,15 @@ li{
     .grid{
         width: 25rem;
         height: 25rem;
+    }
+
+    .project_image{
+        width: 25rem;
+        height: auto;
+        
+    }
+
+    .project_text{
+        text-align:start;
     }
 }
