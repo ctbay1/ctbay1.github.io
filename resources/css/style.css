@@ -1,11 +1,17 @@
+/*
 @font-face {
     font-family: "Retro-font";
     src: url(../fonts/retro_gaming/Retro\ Gaming.ttf);
+}*/
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/roboto/Roboto-Regular.ttf);
 }
 
 *{
     box-sizing: border-box;
-    font-family: 'Retro-font';
+    font-family: "Roboto", sans-serif;
     color: aliceblue;
 }
 
