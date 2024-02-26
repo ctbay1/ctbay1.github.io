@@ -125,6 +125,11 @@ table input{
 }
 
 @media only screen and (max-width: 800px){
+
+    .calculators h3{
+        font-size: 2rem;
+    }
+
     .table_pc{
         display: none;
     }

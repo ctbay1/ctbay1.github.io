@@ -61,8 +61,8 @@ header a{
 }
 
 #header-logo{
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
 }
 
 main{
@@ -286,11 +286,15 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h1{
-    font-size: 3.2rem;
+    font-size: 2.8rem;
 }
 
 h2{
-    font-size: 2.4rem;
+    font-size: 2.5rem;
+}
+
+h2.project_title{
+    font-size: 2.3rem;
 }
 
 h3 {
@@ -320,8 +324,21 @@ li{
     }
     
     .intro{
-        max-height: 50rem;
+        max-height: 40rem;
         overflow: scroll;
+    }
+
+    h1{
+        font-size: 2.6rem;
+        margin: 0.5rem;
+    }
+
+    h2{
+        font-size: 2.2rem;
+    }
+
+    h2.project_title{
+        font-size: 2.1rem;
     }
 
     .section{
@@ -348,6 +365,12 @@ li{
     .grid{
         width: 25rem;
         height: 25rem;
+    }
+
+    #skills_sec img{
+        height: 4.5rem;
+        margin: 0.5rem;
+        width: auto;
     }
 
     .project_image{
