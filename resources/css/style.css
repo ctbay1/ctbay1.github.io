@@ -101,6 +101,7 @@ main{
     border-right: 0.5rem #5F789E solid;
     /*border: 0.5rem #5F789E solid;*/
     padding: 2rem;
+    overflow-x: auto;
 }
 
 #game_helper_buttons{
@@ -422,7 +423,7 @@ li{
         
     }
 
-    .project_text{
-        text-align:start;
+    .project_text_list{
+        margin-left: 2rem;
     }
 }
