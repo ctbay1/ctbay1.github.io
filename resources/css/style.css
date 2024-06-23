@@ -12,7 +12,7 @@
 *{
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    color: aliceblue;
+    color: white;
 }
 
 html{
@@ -254,15 +254,25 @@ nav a:hover{
     font-size: 1.6rem;
 }
 
-.project_image{
-    width: 45rem;
+.snake_gif{
+    width: 80rem;
     height: auto;
     
 }
 
+.project_image{
+    max-width: 100%;
+    max-height: 50rem;
+    border: #5F789E solid 0.25rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+
 figcaption{
-    margin-top: 0.5rem;
+    margin: 1rem 0;
     font-size: 1.4rem;
+    text-align: center;
+    font-style: italic;
 }
 
 .project_text{
@@ -271,9 +281,42 @@ figcaption{
     line-height: normal;
 }
 
+.project_text_h2{
+    margin: 2rem;
+}
+
+.project_text_list{
+    margin-top: 1.5rem;
+    margin-left: 5rem;
+    text-align:start;
+    line-height: normal;
+}
+
+ul.project_text_list{
+    list-style: disc;
+}
+
+ol.project_text_list{
+    list-style: decimal;
+}
+
+.project_text_list li{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
 .project_link{
     color: #4688EB;
     text-decoration: underline;
+}
+
+li figure img{
+    width: 100%;
+}
+
+strong{
+    letter-spacing: 0.1rem;
 }
 /*********************/
 
@@ -282,7 +325,7 @@ figcaption{
 h1,h2,h3,h4,h5,h6{
     font-weight: 700;
     margin: 1.5rem;
-    
+    letter-spacing: 0.1rem;
 }
 
 h1{
@@ -373,7 +416,7 @@ li{
         width: auto;
     }
 
-    .project_image{
+    #snake_gif{
         width: 25rem;
         height: auto;
         

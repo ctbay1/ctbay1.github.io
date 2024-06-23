@@ -167,7 +167,7 @@
                 <h2 class="title button center project_title">Snake Game (C++)</h2>
                     <div hidden class="section center">
                         <figure>
-                            <img src="./resources/images/snake_gif.gif" alt="snake game gif" class="project_image">
+                            <img src="./resources/images/snake_gif.gif" alt="snake game gif" id="snake_gif">
                             <figcaption>Short preview of the game</figcaption>
                         </figure>
                         <article>
@@ -178,6 +178,843 @@
                                 The source code can be found <a href="https://github.com/ctbay1/portfo_snake_game" target="_blank"><span class="project_link">here</span></a>
                             </p>
                         </article>
+                    </div>
+                <h2 class="title button center project_title">The NLP Project Store: E-commerce Chatbot Demo with Flask and NLP (Python)</h2>
+                    <div hidden class="section center" >
+                        <h2 class="project_text_h2">1. Introduction</h2>
+                            <h3>1.1. Overview</h3>
+                            <p class="project_text">
+                                Project link: 
+                                <a href="https://ctbay.pythonanywhere.com/" target="_blank" class="project_link">https://ctbay.pythonanywhere.com</a>
+                            </p>
+                            <p class="project_text">
+                                This project showcases the development of an e-commerce chatbot designed to enhance customer service interactions within an online clothing store.  
+                                The chatbot aims to understand natural language queries, identify customer intents, extract relevant entities, and provide accurate responses. 
+                                By leveraging Natural Language Processing (NLP) techniques, including intent classification and named entity recognition (NER), 
+                                this chatbot provides a streamlined and informative user experience. <br> <br>
+                                The project goes beyond the chatbot itself, incorporating a basic online store frontend built with Flask, HTML, CSS, and JavaScript. 
+                                This interactive interface demonstrates the chatbot's capabilities in a realistic setting, allowing users to browse products, add items to their cart, 
+                                and interact with the chatbot for various inquiries.
+                            </p>
+                            <figure>
+                                <img src="./resources/images/ctbay.pythonanywhere.com_index.png" alt="NLP Project Store" class="project_image">
+                                <figcaption>The homepage of the NLP Project Store</figcaption>
+
+                            </figure>
+                            <figure style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                                <div>
+                                    <img src="./resources/images/nlp_project_store_chatbot_messaging_1.png" alt="NLP Project Store Chatbot" class="project_image">
+                                    <figcaption>The chatbot interface of the NLP Project Store, talking to the chatbot</figcaption>
+        
+                                </div>
+                                <div>
+                                    <img src="./resources/images/nlp_project_store_chatbot_messaging_2.png" alt="NLP Project Store Chatbot" class="project_image">
+                                    <figcaption>The chatbot interface of the NLP Project Store, talking to the chatbot</figcaption>
+                                </div>
+                            </figure>
+                            <h3>1.2. Goals</h3>
+                            <p class="project_text">
+                                The primary goal of this project is to demonstrate and solidify my knowledge of NLP and machine learning concepts acquired through Codecademy's course. 
+                                By creating a practical, functional chatbot, I aimed to showcase my ability to:
+                                <ul class="project_text_list">
+                                    <li>
+                                        Accurately classify user intents with an accuracy target of at least 90%.
+                                    </li>
+                                    <li>
+                                        Extract relevant entities (products, sizes, colors, etc.) from natural language queries.
+                                    </li>
+                                    <li>
+                                        Provide informative and helpful responses based on user queries.
+                                    </li>
+                                    <li>
+                                        Integrate the chatbot into a web application to provide a seamless user experience.
+                                    </li>
+                                </ul>
+                            </p>
+                            <h3>1.3. Motivation</h3>
+                            <p class="project_text">
+                                My interest in NLP and AI, fueled by their growing importance in modern technology, inspired this project. 
+                                Recognizing the widespread use of chatbots in customer service, I saw an opportunity to explore this exciting field while creating a 
+                                practical application that could potentially improve the online shopping experience.
+                                <br><br>
+                                This project served as a challenging yet rewarding exploration of NLP and web development, demonstrating the potential of AI to automate and enhance customer 
+                                interactions in the e-commerce domain.
+                            </p>
+                        <h2>2. System Architecture</h2>
+                            <h3>
+                                2.1. Diagram
+                            </h3>
+                            <figure>
+                                <img src="./resources/images/nlp_project_store_architecture.svg" alt="NLP Project Store Architecture" class="project_image">
+                                <figcaption>The system architecture of the NLP Project Store</figcaption>
+                            </figure>
+                            <p class="project_text">
+                                This diagram illustrates the overall architecture of the e-commerce chatbot system. 
+                                The user interacts with the frontend UI, which sends requests to the Flask backend. 
+                                The backend utilizes the chatbot model to process user input and generate responses, which are then sent back to the frontend for display to the user.
+                            </p>
+                            <figure>
+                                <img src="./resources/images/nlp_project_store_chatbot_architecture.svg" alt="NLP Project Store Chatbot Architecture" class="project_image">
+                                <figcaption>The chatbot architecture of the NLP Project Store</figcaption>
+                            </figure>
+                            <p class="project_text">
+                                This diagram details the internal process of the chatbot model when interacting with a user message. It includes intent classification, 
+                                entity extraction (using two NER models and a color list), and the generation of a response based on the identified intent and entities.
+                            </p>
+                            <h3>
+                                2.2. Technology Stack
+                            </h3>
+                            <p class="project_text">
+                                The NLP Project Store leverages a variety of technologies to deliver a seamless user experience. 
+                                The primary components of the project's technology stack include:
+                                <ul class="project_text_list">
+                                    <li>
+                                        <strong>Flask:</strong> This lightweight Python web framework is ideal for prototyping and building
+                                         the backend logic for this chatbot-driven e-commerce application. 
+                                        Its simplicity and flexibility make it easy to define routes, handle requests, and render templates..
+                                    </li>
+                                    <li>
+                                        <strong>Spacy:</strong> This powerful NLP library offers robust Named Entity Recognition (NER) capabilities, 
+                                        making it a natural choice for extracting relevant information (products, sizes, colors) from user input..
+                                    </li>
+                                    <li>
+                                        <strong>Scikit-learn:</strong> This machine learning library offers the Naive Bayes algorithm used for intent classification. 
+                                        It simplifies the implementation and provides tools for model training and evaluation.
+                                    </li>
+                                    <li>
+                                        <strong>NLTK:</strong> The Natural Language Toolkit (NLTK) provides essential text processing tools like tokenization, lemmatization, 
+                                        and stopword removal, which are crucial for preparing text data for both intent classification and entity extraction.
+                                    </li>
+                                    <li>
+                                        <strong>JavaScript:</strong> JavaScript enables dynamic updates to the web page without the need for full page reloads, enhancing the user experience. 
+                                        The Fetch API is employed to enable asynchronous communication with the Flask backend, 
+                                        primarily for sending user messages to the chatbot and receiving its responses, allowing for a seamless chat experience without page refreshments. 
+                                        Additionally, it is also used to handle dynamic interactions like the opening and closing of the categories section on the homepage.
+                                    </li>
+                                    <li>
+                                        <strong>HTML/CSS:</strong> The structural foundation of the web page, HTML defines the layout and content, 
+                                        while CSS provides the visual styling, ensuring a visually appealing and user-friendly interface.
+                                    </li>
+                                    <li>
+                                        <strong>Pandas:</strong> This versatile data manipulation library is utilized to read, process, and organize the CSV data files 
+                                        that store inventory information, user details, and training data for the NLP models.
+                                    </li>
+                                    <li>
+                                        <strong>werkzeug.security:</strong> This module ensures the security of user passwords by providing hashing and password verification functions.
+                                    </li>
+                                </ul>
+                        <h2>
+                            3. Natural Language Processing (NLP) Components
+                        </h2>
+                        <p class="project_text">
+                            The e-commerce chatbot leverages natural language processing (NLP) to understand user queries and provide relevant responses. 
+                            The core NLP components consist of:
+                        </p>
+                            <h3>
+                                3.1. Intent Classification
+                            </h3>
+                                <h4>
+                                    3.1.1. Approach
+                                </h4>
+                                    <p class="project_text">
+                                        A Naive Bayes classifier is employed to determine the intent of a user's message. 
+                                        This probabilistic model calculates the probability of a message belonging to each predefined intent based on the words it contains. 
+                                        The intent with the highest probability is chosen as the most likely one.
+                                    </p>
+                                <h4>
+                                    3.1.2. Dataset Creation and Refinement 
+                                </h4>
+                                    <p class="project_text">
+                                        To train the classifier, an <em style="color: #CF5F44;">intent_data.csv</em> dataset was meticulously curated, 
+                                        containing diverse user utterances paired with their corresponding intents. Chatbots and other resources were utilized to 
+                                        automatically generate a wider variety of sentence structures. Given the limited resources of an individual project, the dataset 
+                                        is not exhaustive, but it was designed to be representative of common user queries. 
+                                    </p>
+                                    <figure>
+                                        <img src="./resources/images/nlp_project_store_intent_data_sample.png" alt="NLP Project Store Intent Data Sample" class="project_image">
+                                        <figcaption>A sample of the intent_data.csv dataset</figcaption>
+                                    </figure>
+                                    <p class="project_text">
+                                        This dataset underwent several iterations of refinement:
+                                        <ul class="project_text_list">
+                                            <li>
+                                                <strong>Brainstorming:</strong> A variety of potential user queries were brainstormed for each intent, 
+                                                focusing on capturing diverse phrasing, vocabulary, and sentence structures.
+                                            </li>
+                                            <li>
+                                                <strong>Data Augmentation:</strong> Additional queries were generated using chatbot tools to increase the dataset's diversity.
+                                            </li>
+                                            <li>
+                                                <strong>Labeling:</strong> Each utterance was manually labeled with its correct intent. 
+                                                This involved carefully assigning each utterance to one of the predefined categories (e.g., order_status, returns, stock_info, etc.).
+                                            </li>
+                                            <li>
+                                                <strong>Error Analysis and Refinement</strong> The classifier's performance was evaluated, and the resulting confusion matrix was analyzed. 
+                                                Misclassified utterances were identified, and the dataset was further refined by adding more variations and emphasizing intent-specific keywords. 
+                                                This iterative process significantly improved the model's accuracy from an initial score below 0.5 to a final score of 0.95.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                <h4>
+                                    3.1.3. Model Training and Evaluation
+                                </h4>
+                                    <p class="project_text">
+                                        The Naive Bayes classifier was trained on the refined dataset using Scikit-learn. 
+                                        The model's performance was evaluated using a variety of metrics, such as its accuracy score, and confusion matrix.
+                                        The final model achieved an accuracy of 95%, indicating its ability to accurately classify user intents.
+                                    </p>
+                                    <figure>
+                                        <img src="./resources/images/nlp_project_store_intent_classification_preprocessing.png" alt="NLP Project Store Intent Classification Preprocessing" class="project_image">
+                                        <figcaption>The preprocessing steps for intent classification</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="./resources/images/nlp_project_store_intent_classification_training_the_model.png" alt="NLP Project Store Intent Classification Training the Model" class="project_image">
+                                        <figcaption>Training the intent classification model</figcaption>
+                                    </figure>
+                                <h4>
+                                    3.1.4. Adressing Challenges
+                                </h4>
+                                    <p class="project_text">
+                                        The limited dataset size posed a significant challenge, as it constrained the model's ability to learn subtle nuances in user language. 
+                                        However, by carefully crafting and enriching the dataset with intent-specific keywords, the accuracy was significantly improved.
+                                        <br><br>
+                                        Ambiguity between certain intents (e.g., "shipping_info" vs. "order_status") remains a challenge, 
+                                        especially in cases where the user's query lacks specific context. Future enhancements could involve gathering additional data to 
+                                        improve the model's ability to disambiguate these cases or incorporating contextual information into the classification process.
+                                    </p>
+                            <h3>
+                                3.2. Entity Extraction
+                            </h3>
+                            <p class="project_text">
+                                To identify specific items, their sizes, colors, and order numbers mentioned in user queries, 
+                                a hybrid approach combining Named Entity Recognition (NER) with a rule-based color identification system was implemented.
+                            </p>
+                                <h4>
+                                    3.2.1. Named Entity Recognition (NER) with SpaCy
+                                </h4>
+                                    <p class="project_text">
+                                        <strong>spaCy NER Model:</strong> The core of the entity extraction relies on a custom spaCy NER model trained to recognize product types (PRODUCT) 
+                                        and sizes (SIZE). The model was trained on a dataset of diverse user queries, meticulously labeled using the Label Studio annotation tool.
+                                        <br><br>
+                                        A second NER model was also trained to recognize the combined PRODUCT_DETAILS entity, which encompasses the product name, color, and size information. 
+                                        This model addresses the challenge of associating these entities when multiple products are mentioned in a single query.
+                                    </p>
+                                    <p class="project_text">
+                                        <strong>Model 1:</strong>Trained to identify individual entities (PRODUCT, SIZE) in user queries.
+                                        <ul class="project_text_list">
+                                            <li>
+                                                <strong>PRODUCT:</strong> General clothing types (e.g., "shirt", "jeans", "dress").
+                                            </li>
+                                            <li>
+                                                <strong>SIZE:</strong> Adjective and numeric sizes (e.g., "small", "large", "waist size 34", "32x32")
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    <p class="project_text">
+                                        <strong>Model 2:</strong> Trained to recognize combined entities (PRODUCT_DETAILS) for more complex queries.
+                                        <ul class="project_text_list">
+                                            <li>
+                                                <strong>PRODUCT_DETAILS:</strong> Captures the full product description, including product name, color, 
+                                                and size (e.g., "blue jeans in a size 32").
+                                            </li>
+                                        </ul>
+                                    <p class="project_text">
+                                        This two-model strategy was crucial to address the challenge of accurately associating sizes and colors with their 
+                                        corresponding products, especially in cases where multiple items were mentioned in a single query.
+                                    </p>
+                                <h4>
+                                    3.2.2. Data Labeling
+                                </h4>
+                                    <p class="project_text">
+                                        An initial set of sentences was generated using the utterances previously crafted for intent classification. 
+                                        To enhance diversity, additional sentences were created using various techniques: 
+                                        including brainstorming diverse product names, sizes, colors, and their combinations and utilizing chatbots for generating diverse sentences.
+                                        <br><br>
+                                        A dataset of approximately 100 sentences was manually labeled using <strong>Label Studio</strong>, an open-source data annotation tool.
+                                    </p>
+                                    <figure>
+                                        <img src="./resources/images/nlp_project_store_ner_model_dataset_sample.png" alt="NLP Project Store NER Model Dataset Sample" class="project_image">
+                                        <figcaption>A sample of the NER model dataset</figcaption>
+                                    </figure>
+                                    <p class="project_text">
+                                        <strong>
+                                            Labeling Guidelines:
+                                        </strong>
+                                        <ul class="project_text_list">
+                                            <li>
+                                                <strong>PRODUCT:</strong> Only the general clothing type (e.g., “shirt,” “dress”) was labeled, excluding specific details like style or material.
+                                            </li>
+                                            <li>
+                                                <strong>SIZE:</strong> The entire size phrase was labeled, including both adjective sizes (e.g., “small”) and numerical sizes (e.g., “waist size 34”).
+                                                <figure>
+                                                    <img src="./resources/images/nlp_project_store_the_first_ner_model_labeling.png" alt="NLP Project Store The First NER Model Labeling" class="project_image">
+                                                    <figcaption>Labeling for PRODUCT and SIZE entities</figcaption> 
+                                                </figure>
+                                            </li>
+                                            <li>
+                                                <strong>PRODUCT_DETAILS:</strong> The full product description, including the product name, color, and size (e.g., "blue jeans in a size 32").
+                                                <figure>
+                                                    <img src="./resources/images/nlp_project_store_the_second_ner_model_labeling.png" alt="NLP Project Store The Second NER Model Labeling" class="project_image">
+                                                    <figcaption>Labeling for PRODUCT_DETAILS entity</figcaption>
+                                                </figure>
+                                            </li>
+                                            <li>
+                                                <strong>COLOR:</strong> Initially considered for NER, but a rule-based approach was ultimately adopted using a comprehensive list of colors derived from a 
+                                                Wikipedia resource: https://github.com/k-kawakami/colorfulnet/blob/master/example_data/wikipedia-list-of-colors.txt. 
+                                                A straightforward rule-based approach was implemented to identify colors mentioned in the user's message. 
+                                                This involved checking if any of the words in the message match the colors in the predefined list. 
+                                                This is a practical approach since color names are relatively well-defined and easier to identify with a straightforward lookup.
+                                                <figure>
+                                                    <img src="./resources/images/nlp_project_store_color_list.png" alt="NLP Project Store Color List" class="project_image">
+                                                    <figcaption>The list of colors used for rule-based color identification</figcaption>
+                                                </figure>
+                                            </li>
+                                        </ul>                                        
+                                    </p>
+                                    <p class="project_text">
+                                        After the labeling was done, the resulting JSON data was loaded into a list. 
+                                        <ul class="project_text_list">
+                                            <li>
+                                                <strong>JSON Data:</strong> The labeled data was stored in JSON format.
+                                            </li>
+                                            <li>
+                                                <strong>Data Loading:</strong> The JSON data was loaded into a list for further processing.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    <figure>
+                                        <img src="./resources/images/nlp_project_store_ner_model_data_loading.png" alt="NLP Project Store NER Model Data Loading" class="project_image">
+                                        <figcaption>Loading the labeled data for the NER model</figcaption>
+                                    </figure>
+                                <h4>
+                                    3.2.3. Model Training
+                                </h4>
+                                    <p class="project_text">
+                                        Both spaCy NER models were trained using the labeled dataset. The training process involved:
+                                        <ol class="project_text_list">
+                                            <li>
+                                                <strong>Initialization:</strong> The spaCy model was initialized with a blank English model.
+                                            </li>
+                                            <li>
+                                                <strong>Adding labels:</strong> The labels (PRODUCT, SIZE, PRODUCT_DETAILS) were added to the respective NER model.
+                                            </li>
+                                            <li>
+                                                <strong>Training loop:</strong> The model was trained using the labeled dataset for a specified number of iterations.
+                                            </li>
+                                        </ol>
+                                    </p>
+                                    <figure>
+                                        <img src="./resources/images/nlp_project_store_ner_model_training.png" alt="NLP Project Store NER Model Training" class="project_image">
+                                        <figcaption>Training the NER model</figcaption>
+                                    </figure>
+                                <h4>
+                                    3.2.4. Evaluation and Adressing Challenges
+                                </h4>
+                                    <p class="project_text">
+                                        <strong>
+                                            Evaluation:
+                                        </strong>
+                                        <ul class="project_text_list">
+                                            <li>
+                                                <strong>Non-continuous product descriptions:</strong> One challenge encountered during entity extraction was the ambiguity arising 
+                                                from non-continuous product descriptions (e.g., "I like those blue jeans... are they available in a size 30?").
+                                            </li>
+                                            <li>
+                                                <strong>Ambiguous queries:</strong> Queries that mentioned multiple products or sizes in a single sentence posed a challenge for the NER model.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    <p class="project_text">
+                                        <strong>
+                                            Addressing Challenges: To enhance entity recognition, the following strategies were employed:
+                                        </strong>
+                                        <ul class="project_text_list">
+                                            <li>
+                                                <strong>Refined Training Data:</strong> The dataset was enriched with more negative examples to reduce overfitting to specific patterns. Additionally,
+                                                wider range of variations for size formats were included to improve the model's ability to recognize diverse size representations.
+                                            </li>
+                                            <li>
+                                                <strong>Iterative training:</strong> Multiple iterations of training were conducted, varying the number of training epochs to find the optimal balance between underfitting and overfitting. 
+                                                It was discovered that around 50 iterations resulted in the best performance, likely due to the limitations of the small dataset.
+                                            </li>
+                                            <li>
+                                                <strong>Ambiguous Product Descriptions:</strong> Some product descriptions were non-continuous or contained ambiguous terms. 
+                                                This was addressed by labeling them as a single PRODUCT_DETAILS entity 
+                                                and then using a separate NER model trained on complete product descriptions to extract the individual components (product, size, color).
+                                            </li>
+                                        </ul>
+                                    </p>
+                        <h2>
+                            4. Chatbot Implementation
+                        </h2>
+                        <p class="project_text">
+                            This section delves into the core logic of the chatbot, 
+                            focusing on how it processes user input, classifies intent, extracts relevant entities, and generates appropriate responses.
+                        </p>
+                            <h3>
+                                4.1. Chatbot Architecture
+                            </h3>
+                                <p class="project_text">
+                                    The chatbot is designed as a hybrid system that combines aspects of both rule-based and retrieval-based architectures.
+                                    <ul class="project_text_list">
+                                        <li>
+                                            <strong>Rule-based:</strong> It incorporates rule-based logic to handle specific scenarios and tasks. 
+                                            This is evident in the <em style="color: #CF5F44;">directing_function</em>, which determines the flow of the conversation and calls appropriate functions based on the 
+                                            identified intent (e.g., retrieving order status, adding items to the cart, or providing product information).
+                                        </li>
+                                        <li>
+                                            <strong>Retrieval-based:</strong> It primarily operates by retrieving pre-defined responses from the responses.csv file. 
+                                            The intent classification model helps select the most appropriate response based on the user's query.
+                                        </li>
+                                    </ul>
+                                </p>
+                            <h3>
+                                4.2. Intent Classification
+                            </h3>
+                                <p class="project_text">
+                                    The chatbot's find_intent function is responsible for classifying the user's intent based on their message.
+                                    The chatbot employs a Naive Bayes classifier to determine the intent behind a user's message. 
+                                    The classifier has been trained on a carefully curated dataset (intent_data.csv) that encompasses a wide range of user queries and 
+                                    their associated intents (e.g., order_status, returns, stock_info).
+                                    <br><br>
+                                    To enhance the chatbot's ability to handle irrelevant or out-of-scope queries, a probability threshold of 0.2 is employed. 
+                                    After the Naive Bayes classifier predicts the intent, the model's confidence in that prediction is assessed. 
+                                    If the probability of the predicted intent falls below the threshold, the chatbot defaults to a 
+                                    "I'm sorry, I didn't quite understand that. Could you rephrase your question?" response, prompting the user to try again.
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/nlp_project_store_chatbot_intent_classification.png" alt="NLP Project Store Intent Classification" class="project_image">
+                                    <figcaption>Intent classification in the chatbot, find_intent function</figcaption>
+                                </figure>
+                            <h3>
+                                4.3. Entity Extraction
+                            </h3>
+                                <p class="project_text">
+                                    The chatbot employs two distinct spaCy NER models to extract relevant entities from user messages:
+                                    <ul class="project_text_list">
+                                        <li>
+                                            <strong>Model 1 (nlp_label_productName_size):</strong> Extracts individual entities such as PRODUCT (e.g., "shirt", "jeans") and SIZE (e.g., "small", "waist size 30"). 
+                                            This model is used for both single-product and multiple-product queries to identify basic product information.
+                                        </li>
+                                        <li>
+                                            <strong>Model 2 (nlp_label_product_details):</strong> Identifies entire product descriptions as PRODUCT_DETAILS entities. 
+                                            This model is specifically designed to address the ambiguity of multiple products mentions by grouping product names, sizes, and colors together.
+                                        </li>
+                                    </ul>    
+                                </p>
+                                <p class="project_text">
+                                    The <em style="color: #CF5F44;">find_entities</em> function utilizes these two models strategically to extract information, prioritizing 
+                                    Model 2 for queries with multiple products mentioned to resolve potential ambiguities in entity association. 
+                                    The <em style="color: #CF5F44;">get_size_product_color_from_extracted_entities</em> function further processes the extracted entities, 
+                                    cleaning and organizing them into a standardized format.
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/nlp_project_store_chatbot_entity_extraction.png" alt="NLP Project Store Entity Extraction" class="project_image">
+                                    <figcaption>Entity extraction in the chatbot, find_entities function</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="./resources/images/nlp_project_store_chatbot_entity_extraction_2.png" alt="NLP Project Store Entity Extraction 2" class="project_image">
+                                    <figcaption>Further processing of extracted entities</figcaption>
+                                </figure>
+                            <h3>
+                                4.4. Managing Conversational State and Context
+                            </h3>
+                                <p class="project_text">
+                                    The chatbot maintains a minimal level of conversational state using a <em style="color: #CF5F44;">self.state</em> dictionary. 
+                                    This state is primarily used to track situations where the chatbot requires additional input from the user to complete a specific task.
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/nlp_project_store_chatbot_conversational_state.png" alt="NLP Project Store Conversational State" class="project_image">
+                                    <figcaption>Managing conversational state in the chatbot</figcaption>
+                                </figure>
+                                <p class="project_text">
+                                    <strong>Example: Order Status Inquiry</strong> <br> <br>
+                                    For example, when the user's intent is identified as order_status, 
+                                    but their order number isn't explicitly mentioned in their message, the chatbot:
+                                    <ol class="project_text_list">
+                                        <li>Sets <em style="color: #CF5F44;">self.state['current_task']</em> to "waiting for an input".</li>
+                                        <li>Sets <em style="color: #CF5F44;">self.state['intent_label']</em> to order_status.</li>
+                                        <li>Prompts the user to provide their order number.</li>
+                                    </ol>
+                                </p>
+                                <p class="project_text">
+                                    In subsequent interactions, the chatbot checks the self.state to determine if it's waiting for an input. 
+                                    If so, it processes the user's input (e.g., the order number) to fulfill the previous request.
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/nlp_project_store_chatbot_conversational_state_2.png" alt="NLP Project Store Conversational State 2" class="project_image">
+                                    <figcaption>Managing conversational state for order status inquiries</figcaption>
+                                </figure>
+                                <p class="project_text">
+                                    This allows the chatbot to "remember" that it's waiting for an order number in the next user message. 
+                                    When the user provides the number, the chatbot can then proceed with the order status lookup.
+                                </p>
+                            <h3>
+                                4.5. Chatbot Response Generation Summary
+                            </h3>
+                                <p class="project_text">
+                                    The overall interaction flow of the chatbot can be summarized as follows:
+                                    <ol class="project_text_list">
+                                        <li>
+                                            <strong>User input: </strong> The <em style="color: #CF5F44;">chatbot.respond</em> function is called in the Flask routes, 
+                                            passing the user's message as input.
+                                        </li>
+                                        <li>
+                                            <strong>Intent Classification: </strong> The <em style="color: #CF5F44;">find_intent</em> function identifies 
+                                            the user's intent (e.g., order_status, add_cart) 
+                                            using a Naive Bayes classifier trained on the <em style="color: #CF5F44;">intent_data.csv</em> dataset.
+                                        </li>
+                                        <li>
+                                            <strong>Entity Extraction (Optional): </strong> If the intent requires it (e.g., stock_info, add_cart), 
+                                            the <em style="color: #CF5F44;">find_entities</em> function extracts 
+                                            relevant entities (products, sizes, colors) from the user's message. 
+                                            If multiple products are mentioned, the second NER model (nlp_label_product_details) is used to group entities.
+                                        </li>
+                                        <li>
+                                            <strong>Response Generation: </strong>
+                                            <ul class="project_text_list">
+                                                <li>
+                                                    If the chatbot is waiting for additional input (as indicated by <em style="color: #CF5F44;">self.state</em>), it processes the user's input and generates a response accordingly.
+                                                </li>
+                                                <li>
+                                                    If the chatbot does not require further input, it generates a response based on the identified intent and entities.
+                                                </li>
+                                            </ul>
+                                            The <em style="color: #CF5F44;">directing_function</em> method handles the intent-specific logic, 
+                                            possibly updating the <em style="color: #CF5F44;">self.state</em> if further input is needed, and generates an appropriate response.
+                                        </li>
+                                        <li>
+                                            <strong>Response Display: </strong> The response is returned to the frontend, where it is displayed to the user in the chat interface.
+                                        </li>
+                                    </ol>
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/nlp_project_store_chatbot_response_generation.png" alt="NLP Project Store Chatbot Response Generation" class="project_image">
+                                    <figcaption>Chatbot response generation process, respond function</figcaption>
+                                </figure>
+                                <p class="project_text">
+                                    <strong>Key points:</strong>
+                                    <ul class="project_text_list">
+                                        <li>
+                                            The respond function is the main entry point for handling user messages.
+                                        </li>
+                                        <li>
+                                            <em style="color: #CF5F44;">find_intent</em> and <em style="color: #CF5F44;">find_entities</em> are the core NLP functions.
+                                        </li>
+                                        <li>
+                                            The <em style="color: #CF5F44;">directing_function</em> manages the flow of the conversation based on the identified intent.
+                                        </li>
+                                        <li>
+                                            <em style="color: #CF5F44;">self.state</em> is used to manage limited conversational context for scenarios where the chatbot needs additional input.
+                                        </li>
+                                    </ul>
+                                </p>
+                        <h2>
+                            5. Web Application Development (Flask)
+                        </h2>
+                        <figure>
+                            <img src="./resources/images/ctbay.pythonanywhere.com_index.png" alt="NLP Project Store" class="project_image">
+                            <figcaption>The homepage of the NLP Project Store</figcaption>
+                        </figure>
+                            <h3>
+                                5.1. Overview
+                            </h3>
+                                <p class="project_text">
+                                    The chatbot is integrated into a Flask (a lightweight Python web framework) web application designed to simulate a basic online clothing store. 
+                                    This serves as a practical demonstration of the chatbot's capabilities in a realistic e-commerce setting. The application allows users to:
+                                    <ul class="project_text_list">
+                                        <li>
+                                            Browse product listings.
+                                        </li>
+                                        <li>
+                                            View individual product details.
+                                        </li>
+                                        <li>
+                                            Add items to their cart.
+                                        </li>
+                                        <li>
+                                            View their cart contents.
+                                        </li>
+                                        <li>
+                                            Log in to a simulated user profile.
+                                        </li>
+                                        <li>
+                                            Interact with the chatbot throughout the website.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p class="project_text">
+                                    Flask handles routing, template rendering, and the backend logic for user interactions, product display, and chatbot integration.
+                                </p>
+                            <h3>
+                                5.2. Flask Routes and Templates
+                            </h3>
+                                <p class="project_text">
+                                    The Flask application defines several routes to handle different pages and actions:
+                                    <ul class="project_text_list">
+                                        <li>
+                                            <strong>/(index):</strong> The homepage displays a list of available products fetched from the inventory.csv file.
+                                            <figure>
+                                                <img src="./resources/images/nlp_project_store_flask_route_index.png" alt="NLP Project Store Flask Route Index" class="project_image">
+                                                <figcaption>The Flask route for the homepage</figcaption>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <strong>/product/&lt;product_type&gt; (categories):</strong> Displays a filtered list of products based on their category (e.g., shirts, pants).
+                                            <figure>
+                                                <img src="./resources/images/nlp_project_store_flask_route_categories.png" alt="NLP Project Store Flask Route Categories" class="project_image">
+                                                <figcaption>The Flask route for product categories</figcaption>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <strong>/product/&lt;product_type&gt;/&lt;productSize_and_color&gt; (product page) </strong> Shows details for a specific product, including an "Add to Cart" button.
+                                            <figure>
+                                                <img src="./resources/images/nlp_project_store_flask_route_product_page.png" alt="NLP Project Store Flask Route Product Page" class="project_image">
+                                                <figcaption>The Flask route for the product page</figcaption>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <strong>/cart</strong> Renders the user's shopping cart, allowing them to view and modify its contents.
+                                        </li>
+                                        <li>
+                                            <strong>/login</strong> Handles user login with authentication using a CSV file containing mock user data.
+                                        </li>
+                                        <li>
+                                            <strong>/profile/&lt;username&gt;</strong> Displays the user's profile page, showing their order history and personal information.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p class="project_text">
+                                    Each route is associated with a corresponding HTML template (e.g., index.html, product_page.html, cart_page.html, etc.) 
+                                    that is rendered to present the information to the user.
+                                </p>
+                                <p class="project_text">
+                                    <strong>Homepage (/) and Category Pages (/product/&lt;product_type&gt;):</strong> The homepage and category pages share a similar structure. 
+                                    They display a list of products fetched from the inventory.csv file. 
+                                    Each product is presented with an image (or placeholder), name, size, color, and price. Users can click on a product to view its details on the product page.
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/ctbay.pythonanywhere.com_index.png" alt="NLP Project Store" class="project_image">
+                                    <figcaption>The homepage of the NLP Project Store</figcaption>
+                                </figure>
+                                <p class="project_text">
+                                    <strong>Product Page (/product/&lt;product_type&gt;/&lt;productSize_and_color&gt;):</strong> The product page provides detailed information about a specific product. It fetches the product details from the inventory.csv file based on the product_type and productSize_and_color parameters passed in the URL. 
+                                    The page displays the product's image, name, description, price, available sizes and colors, and stock quantity. 
+                                    The "Add to Cart" button is also present on this page.
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/ctbay.pythonanywhere.com_product_jeans_w36_and_indigo.png" alt="NLP Project Store Product Page" class="project_image">
+                                    <figcaption>The product page of the NLP Project Store</figcaption>
+                                </figure> 
+                                <p class="project_text">
+                                    <strong>Shopping Cart (/cart):</strong> The cart page displays a list of items that the user has added to their cart. 
+                                    Each item is displayed with its name, size, color, quantity, and price. The cart calculates the total price based on the items and their quantities.
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/ctbay.pythonanywhere.com_cart.png" alt="NLP Project Store Cart Page" class="project_image">
+                                    <figcaption>The cart page of the NLP Project Store</figcaption>
+                                </figure>
+                                <p class="project_text">
+                                    <strong>User Login (/login) and Profile Page (/profile/&lt;username&gt;):</strong> The login page provides a form for users to enter their username and password. 
+                                    It then authenticates the user against a list of registered users stored in the sample_users.csv file using werkzeug.security for password hashing. 
+                                    If the login is successful, the user is redirected to their profile page (/profile/&lt;username&gt;). 
+                                    The profile page displays user-specific information (e.g., the latest order, order history).
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/ctbay.pythonanywhere.com_login.png" alt="NLP Project Store Login Page" class="project_image">
+                                    <figcaption>The login page of the NLP Project Store</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="./resources/images/ctbay.pythonanywhere.com_profile_johndoe123.png" alt="NLP Project Store Profile Page" class="project_image">
+                                    <figcaption>The profile page of a user NLP Project Store</figcaption>
+                                </figure>
+                            <h3>
+                                5.3. JavaScript Integration
+                            </h3>
+                                <p class="project_text">
+                                    JavaScript is used for dynamic interactions on the website, including:
+                                    <ul class="project_text_list">
+                                        <li>
+                                            <strong>Fetch API:</strong> It is used to send user messages to the 
+                                            Flask backend and receive the chatbot's responses asynchronously, avoiding full page refreshes and creating a smooth, chat-like interaction.
+                                        </li>
+                                        <li>
+                                            <strong>Category Selection:</strong> JavaScript is used to toggle the visibility of the categories section on the homepage.
+                                        </li>
+                                    </ul>
+                                </p>
+                            <h3>
+                                5.4. Flask Backend and Sessions
+                            </h3>
+                                <p class="project_text">
+                                    Flask handles the backend logic, including:
+                                    <ul class="project_text_list">
+                                        <li>
+                                            <strong>Routing:</strong> Managing different URL paths and associated actions.
+                                        </li>
+                                        <li>
+                                            <strong>Rendering templates:</strong> Generating HTML pages based on templates and data.
+                                        </li>
+                                        <li>
+                                            <strong>Chatbot Interaction:</strong> Receiving user messages, processing them with the chatbot, and returning appropriate responses.
+                                            <figure>
+                                                <img src="./resources/images/nlp_project_store_flask_chatbot_interaction.png" alt="NLP Project Store Flask Chatbot Interaction" class="project_image">
+                                                <figcaption>Chatbot interaction in the Flask backend</figcaption>
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <strong>Session management:</strong> Using sessions to store user-specific data, like the chatbot object, shopping cart, and login status.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p class="project_text">
+                                    <strong>Flask sessions:</strong> Flask sessions are used to maintain user-specific data across multiple requests. 
+                                    This includes the user's login status, cart information, and the state of the chatbot's conversation.
+                                    <br><br>
+                                    The ChatBot object is stored in the session and accessed in all relevant routes to ensure a seamless chatbot experience for each user.
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/nlp_project_store_flask_session_management.png" alt="NLP Project Store Flask Session Management" class="project_image">
+                                    <figcaption>Session management in the Flask backend</figcaption>
+                                </figure>
+                        <h2>
+                            6. Challenges and Learnings
+                        </h2>
+                        <p class="project_text">
+                            Building the NLP Project Store chatbot presented several challenges, primarily stemming from the limitations of working with a small dataset, 
+                            the inherent ambiguity of natural language, and the intricacies of deploying a web application with integrated AI components. <br>
+                            However, these challenges also provided valuable learning opportunities and insights about how to address them effectively. 
+                        </p>
+                            <h3>
+                                6.1. Intent Classification Challenges
+                            </h3>
+                                <p class="project_text">
+                                    The limited size of the intent_data.csv dataset posed a significant hurdle. With only a few examples per intent initially, 
+                                    the Naive Bayes classifier struggled to generalize and accurately classify user queries, leading to an initial accuracy score of less than 50%. <br>
+                                    To address this, an iterative process of data augmentation and refinement was employed:
+                                    <ul class="project_text_list">
+                                        <li>
+                                            <strong>Data Augmentation: </strong> Synonyms, paraphrasing, and sentence restructuring techniques were used to expand the dataset, 
+                                            introducing variations in language while preserving the core intent.
+                                        </li>
+                                        <li>
+                                            <strong>Keyword Emphasis:</strong> Intent-specific keywords were identified and emphasized in the dataset to help the model learn the distinguishing features of each intent.
+                                        </li>
+                                        <li>
+                                            <strong>Error Analysis:</strong> Thorough analysis of the confusion matrix and misclassified examples guided the refinement process, 
+                                            highlighting areas where the classifier needed more examples or clarity.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p class="project_text">
+                                    Through these efforts, the accuracy of the intent classifier was significantly improved, ultimately reaching an average score of 95.4% 
+                                    across multiple evaluations. This demonstrates the effectiveness of a systematic approach to dataset enhancement, even when working with 
+                                    limited resources.
+                                </p>
+                            <h3>
+                                6.2. Entity Extraction Challenges
+                            </h3>
+                                <p class="project_text">
+                                    The limited size of the dataset posed a challenge, as it constrained the model's ability to learn subtle nuances in user language and generalize 
+                                    to a wider range of product descriptions. <br>
+                                    To mitigate this, an iterative approach to dataset refinement was adopted:
+                                    <ul class="project_text_list">
+                                        <li>
+                                            <strong>Two-model Approach:</strong> A two-model strategy was adopted to overcome the ambiguity of multiple products. 
+                                            One model focuses on extracting individual entities (PRODUCT, SIZE), while the other identifies entire product descriptions 
+                                            (PRODUCT_DETAILS), consolidating product names, colors, and sizes. This addresses ambiguity when multiple products are mentioned 
+                                            within a single query.
+                                        </li>
+                                        <li>
+                                            <strong>Rule-based Color identification:</strong> A comprehensive color list was used to efficiently identify COLOR entities, 
+                                            bypassing the need for extensive training data.
+                                        </li>
+                                        <li>
+                                            <strong>Negative Examples:</strong> Sentences were added to the dataset where words or phrases commonly appearing in product descriptions 
+                                            were used in different contexts. For instance, the model initially misidentified the word "some" in the sentence 
+                                            "Can you show me some blue colored jeans?" as a PRODUCT entity. To address this, more examples containing "some" 
+                                            in non-product contexts were added to the dataset to help the model better distinguish its meaning.
+                                        </li>
+                                        <li>
+                                            <strong>Expanding Vocabulary:</strong> To improve the model's ability to recognize a variety of clothing items, sizes, and styles, 
+                                            the dataset was expanded with numerous examples encompassing a broader range of terms. 
+                                            This included variations like "women's running shoes," "32x34 jeans," and "black leather jacket," 
+                                            ensuring that the model could handle the diverse expressions users might employ.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p class="project_text">
+                                    <strong>Observation</strong> <br>
+                                    The number of iterations during NER model training didn't directly correlate with improved entity extraction performance. 
+                                    Experiments with 20, 50, and 100 iterations revealed that 50 iterations yielded the best results, 
+                                    suggesting that the small dataset size might lead to overfitting with higher iteration counts.
+                                </p>
+                            <h3>
+                                6.3. Persisting Chatbot State (Pickle)
+                            </h3>
+                                <p class="project_text">
+                                    Integrating the chatbot object within a Flask session posed an additional challenge. 
+                                    The complex nature of the ChatBot class prevented it from being directly stored in the session due to serialization limitations. <br>
+                                    To overcome this, the pickle module was utilized to serialize and deserialize the chatbot object, 
+                                    allowing its state and attributes to be preserved across user sessions.
+                                </p>
+                                <figure>
+                                    <img src="./resources/images/nlp_project_store_pickle_chatbot.png" alt="NLP Project Store Pickle Chatbot" class="project_image">
+                                    <figcaption>Pickling the chatbot object for session persistence</figcaption>
+                                </figure>
+                            <h3>
+                                6.4. Deployment Challenges
+                            </h3>
+                                <p class="project_text">
+                                    The deployment process on PythonAnywhere presented a few hurdles:
+                                    <ul class="project_text_list">
+                                        <li>
+                                            <strong>File Structure:</strong> Ensuring the correct file structure and paths for the Flask application was crucial for proper deployment.
+                                        </li>
+                                        <li>
+                                            <strong>Environment Setup (NLTK Data):</strong> Installing the necessary packages on PythonAnywhere required careful attention to dependencies.
+                                            The requirement to manually download and configure the NLTK data (stopwords, punkt, wordnet) was an additional step in the deployment process.
+                                        </li>
+                                        <li>
+                                            <strong>Virtual Environment Setup:</strong> Ensuring that all Python packages, including spaCy, were correctly 
+                                            installed and accessible within the virtual environment was essential for the chatbot to function properly.
+                                        </li>
+                                    </ul>
+                                    <p class="project_text">
+                                        By carefully addressing these challenges, the application was successfully deployed and made accessible online.
+                                    </p>
+                                </p>
+                            <h3>
+                                6.5. Learnings and Takeaways
+                            </h3>
+                                <p class="project_text">
+                                    The NLP Project Store provided valuable insights and learnings in various aspects of natural language processing, chatbot development, and web application deployment:
+                                    <ul class="project_text_list">
+                                        <li>
+                                            <strong>Data Augmentation:</strong> The importance of data augmentation in enhancing model performance and generalization.
+                                            Even with a small dataset, careful curation and iterative refinement can lead to significant improvements in model performance. 
+                                            A larger and more diverse dataset would likely lead to further accuracy gains.
+                                        </li>
+                                        <li>
+                                            <strong>Iterative Training:</strong> The benefits of iterative training and dataset refinement to address model limitations and improve accuracy.
+                                        </li>
+                                        <li>
+                                            <strong>Hybrid Architectures:</strong> The advantages of combining rule-based and retrieval-based approaches in chatbot design to handle diverse user queries effectively.
+                                        </li>
+                                        <li>
+                                            <strong>Session Management:</strong> The significance of session management in web applications to maintain user-specific data and state.
+                                        </li>
+                                        <li>
+                                            <strong>Deployment Challenges:</strong> The complexities involved in deploying AI-powered applications and the importance of meticulous setup and configuration.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p class="project_text">
+                                    <strong>Overall</strong>, the NLP Project Store served as a comprehensive learning experience, highlighting the intricacies and challenges of developing 
+                                    AI-powered applications while providing practical insights into effective strategies for overcoming these challenges.
+                                    <br><br>
+                                    With real-world testing, the model can be further refined and expanded to handle a broader range of user queries and product descriptions.
+                                </p>
                     </div>
                 </section>
             <div class="title center">
