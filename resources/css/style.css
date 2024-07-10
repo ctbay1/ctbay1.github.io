@@ -41,13 +41,15 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    /*
     position: fixed;
     top: 0;
     z-index: 2;
+    */
 }
 
 nav{
-    position: fixed;
+    position: absolute;
     left: 2rem;
 }
 
@@ -67,7 +69,9 @@ header a{
 
 main{
     position: relative;
+    /*
     top: 12rem;
+    */
 }
 
 .center{
@@ -104,7 +108,7 @@ main{
     overflow-x: auto;
 }
 
-#game_helper_buttons{
+.game_helper_buttons{
     width: 50rem;
     display: flex;
     justify-content: space-evenly;
@@ -398,11 +402,11 @@ li{
         position: static;
     }
 
-    #game_helper h2{
+    .game_helper h2{
         width: 25rem;
     }
 
-    #game_helper_buttons{
+    .game_helper_buttons{
         width: 25rem;
     }
 

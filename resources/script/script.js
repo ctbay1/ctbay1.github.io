@@ -5,7 +5,7 @@ function disp_sec_blocks(num){
 
     if (section_blocks[num].hidden === true){
         section_blocks[num].hidden = false;
-        section_blocks[num].scrollIntoView({behavior: "smooth"});
+        title_blocks[num].scrollIntoView({behavior: "smooth"});
     } else{
         section_blocks[num].hidden = true;
     }
