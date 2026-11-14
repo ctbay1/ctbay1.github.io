@@ -12,7 +12,7 @@ Plain HTML and CSS, served by GitHub Pages straight from the `main` branch. Ther
 | `404.html` | Shown for any address that doesn't exist |
 | `assets/css/site.css` | All styles; colour, type and spacing tokens are at the top in `:root` |
 | `assets/fonts/` | Self-hosted Space Grotesk, Inter and IBM Plex Mono (SIL Open Font License, licence files included) |
-| `assets/img/` | Portrait and Don't Spill screenshots (WebP) |
+| `assets/img/` | Portrait and project screenshots. The One More Passenger JPEGs are copied unchanged from the game's support site, so they keep their Content Credentials |
 | `cv/` | Downloadable CVs in English and Turkish |
 | `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | Browser and home-screen icons |
 | `og.png` | Preview image shown when the link is shared (1200×630) |
