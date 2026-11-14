@@ -481,6 +481,38 @@ a { color: inherit; }
 }
 .phone .caption { justify-content: flex-start; font-size: 11px; }
 
+/* a second feature: a dashed rule above it, and the picture on the left */
+.feature + .feature {
+  padding-top: clamp(40px, 5vw, 64px);
+  border-top: 1px dashed var(--rule-dash);
+}
+.feature--flip { flex-direction: row-reverse; }
+
+/* a web app in a plain browser frame */
+.screen {
+  flex: 1.35 1 540px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 8px;
+}
+.screen__frame { padding: 0 5px 5px; background: var(--ink); border-radius: 12px; }
+.screen__bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 30px;
+  padding-inline: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--on-ink-muted);
+}
+.screen__dots { display: inline-flex; gap: 6px; }
+.screen__dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-rule); }
+.screen__frame img { width: 100%; height: auto; border-radius: 0 0 8px 8px; }
+
 .more { display: flex; flex-direction: column; gap: 20px; padding-top: 16px; }
 
 .cards {
@@ -527,6 +559,14 @@ a { color: inherit; }
   font-size: 13px;
   line-height: 1.5;
 }
+.card__foot a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+  text-underline-offset: 4px;
+}
+.card__foot a:hover { color: var(--accent); }
 
 /* ---------- freelance ---------- */
 
@@ -792,6 +832,10 @@ a { color: inherit; }
   .phone__frame { padding: 3px; border-radius: 18px; }
   .phone__frame img { border-radius: 15px; }
   .phone .caption { font-size: 10px; letter-spacing: 0.06em; }
+  .screen__frame { padding: 0 3px 3px; border-radius: 9px; }
+  .screen__bar { height: 24px; gap: 10px; font-size: 10px; }
+  .screen__dots i { width: 6px; height: 6px; }
+  .screen__frame img { border-radius: 0 0 6px 6px; }
   .timeline__when,
   .toolchain .kv__row dt { flex-basis: 100%; }
   .contact__links { gap: 0 24px; }
