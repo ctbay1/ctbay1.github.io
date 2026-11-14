@@ -16,6 +16,7 @@ Plain HTML and CSS, served by GitHub Pages straight from the `main` branch. Ther
 | `cv/` | Downloadable CVs in English and Turkish |
 | `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | Browser and home-screen icons |
 | `og.png` | Preview image shown when the link is shared (1200×630) |
+| `one-more-passenger/` | A share link for the game: link previews (LinkedIn) read its tags, and visitors go straight on to the App Store |
 | `legacy/` | The first version of this site, kept as it was |
 
 ## Common updates
